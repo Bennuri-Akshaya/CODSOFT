@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bennuri Akshaya - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #9d74c5 100%);
+            color: rgb(255, 255, 255);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section:nth-child(even) {
+            background: #f4f4f4;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #667eea;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+        }
+
+        .bio {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .resume-section {
+            text-align: center;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #764ba2;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .contact-info p {
+            margin: 1rem 0;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bennuri Akshaya</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg" alt="Profile Picture" class="profile-img">
+            <div class="bio">
+                <p> I’m a passionate Software Engineer with a strong interest in Python and AI concepts, and I love building scalable solutions that solve real-world problems.
+I have experience developing clean and functional web applications, especially using Node.js, Express.js, REST APIs, and MySQL.
+I also enjoy creating user-friendly interfaces and I always try to keep design and usability in mind.
+My goal is to build applications that feel smooth, modern, and truly helpful for users.
+</p>
+                <p style="margin-top: 1rem;">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while sketching new design ideas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>HTML & CSS</h3>
+                <p>Expert in semantic HTML and modern CSS techniques</p>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <p>Proficient in ES6+ and modern frameworks</p>
+            </div>
+            <div class="skill-item">
+                <h3>React</h3>
+                <p>Building dynamic single-page applications</p>
+            </div>
+            <div class="skill-item">
+                <h3>Node.js & Express</h3>
+                <p>Creating robust backend services</p>
+            </div>
+            <div class="skill-item">
+                <h3>Git & GitHub</h3>
+                <p>Version control and collaboration</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+        <!-- E-Commerce -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="https://magesolution.com/wp-content/uploads/2022/07/ecommerce-website-design-examples-1024x768.jpg" alt="E-Commerce Website">
+            </div>
+            <div class="project-info">
+                <h3>E-Commerce Website</h3>
+                <p>A fully responsive e-commerce platform built with React and Node.js. Features include user authentication, shopping cart, and payment integration.</p>
+            </div>
+        </div>
+
+        <!-- Weather App -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="https://ucarecdn.com/6320962b-d4bf-4cfc-a66c-7972492f77c0/" alt="Weather App">
+            </div>
+            <div class="project-info">
+                <h3>Weather App</h3>
+                <p>A clean weather application using OpenWeather API. Displays current weather and 5-day forecast with beautiful animations.</p>
+            </div>
+        </div>
+
+        <!-- To Do List -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="https://s3-alpha.figma.com/hub/file/2598177938/0f595d63-f4db-4a23-8222-44e41f519649-cover.png" alt="To Do List App">
+            </div>
+            <div class="project-info">
+                <h3>To Do List App</h3>
+                <p>A simple and productive to-do list app that helps users manage tasks efficiently with a clean and user-friendly interface.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <div class="resume-section">
+            <p>Download my complete resume to learn more about my experience and qualifications.</p>
+            <a href="#" class="download-btn">Download Resume (PDF)</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto: akshayabennuri@gmail.com">akshayabennuri@gmail.com</a></p>
+            <p><strong>Phone:</strong> +91 9876543210</p>
+            <p><strong>Location:</strong> Hyderabad, India</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bennuri Akshaya. All rights reserved.</p>
+        <p>
+            <a href="https://github.com" target="_blank">GitHub</a> | 
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>
